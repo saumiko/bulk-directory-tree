@@ -2,22 +2,16 @@ import os
 import shutil
 import uuid
 import itertools
+import click
 
-mkdir_path = '/Users/saumiko/Desktop/Z/dirprac'
-num_of_dir = 10
-dirname_length = 5
-depth = 4
+mkdir_path = None
+num_of_dir = None
+dig_depth = None
+dirname_length = None
 
 
 def init_dir():
-    if os.path.exists(mkdir_path):
-        dirs = os.listdir(mkdir_path)
-        for dir in dirs:
-            try:
-                shutil.rmtree(os.path.join(mkdir_path, dir))
-            except:
-                continue
-    else:
+    if not os.path.exists(mkdir_path):
         os.makedirs(mkdir_path)
 
 
@@ -44,14 +38,25 @@ def gen_names():
     depth_names = []
     num_of_fol = 1
     name_list = []
-    for i in range(depth):
+    for i in range(dig_depth):
         num_of_fol = num_of_fol * num_of_dir
         for j in range(num_of_fol):
             depth_names.append(get_randname())
-        name_list.append(depth_names.copy())
-        depth_names.clear()
+        name_list.append(list(depth_names))
+        del depth_names[:]
     return name_list
 
 
-init_dir()
-gen_dirs(gen_names())
+@click.command()
+@click.option('--path', '-p', default=os.getcwd(), help="Bulk Directory Creation Path")
+@click.option('--num', '-n', default=1, help="Number of folders to create in each directory")
+@click.option('--depth', '-d', default=1, help="Directory tree depth")
+@click.option('--length', '-l', default=5, help="Directory name length")
+def main(path, num, depth, length):
+    global mkdir_path, num_of_dir, dig_depth, dirname_length
+    mkdir_path = path
+    num_of_dir = num
+    dig_depth = depth
+    dirname_length = length
+    init_dir()
+    gen_dirs(gen_names())
