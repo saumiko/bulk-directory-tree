@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name='bulk_directory_tree',
-    version='0.0.3',
+    version='0.0.4',
     py_modules=['bulk_directory_tree.py'],
     install_requires=[
         'Click==7.0',

@@ -1,0 +1,23 @@
+language: python
+python:
+  - "2.6"
+  - "2.7"
+  - "3.2"
+  - "3.3"
+  - "3.4"
+  - "3.5"
+  - "3.6"
+  - "pypy"
+  - "pypy3"
+dist: trusty
+env:
+  - BULKDIR_TEST_SET=core
+matrix:
+  include:
+    - python: 3.7
+      dist: xenial
+      env: BULKDIR_TEST_SET=core
+install:
+  - pip3 install --upgrade pip
+  - pip3 install --user -r requirements.txt
+script: pytest
