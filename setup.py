@@ -5,10 +5,10 @@ with open("README.md", "r") as fh:
 
 setup(
     name='bulk_directory_tree',
-    version='0.0.4',
+    version='0.0.5',
     py_modules=['bulk_directory_tree.py'],
     install_requires=[
-        'Click==7.0',
+        'Click==7.0'
     ],
     entry_points='''
         [console_scripts]
