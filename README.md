@@ -1,4 +1,5 @@
 # Bulk Directory Tree
+[![Build Status](https://travis-ci.org/saumiko/bulk-directory-tree.svg?branch=master)](https://travis-ci.org/saumiko/bulk-directory-tree)
 
 Creates `n` number of directories for `d` depth at any directory.
 
