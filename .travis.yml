@@ -18,6 +18,5 @@ matrix:
       dist: xenial
       env: BULKDIR_TEST_SET=core
 install:
-  - pip3 install --upgrade pip
-  - pip3 install -r requirements.txt
-script: pytest
+  - pip install --upgrade pip
+  - pip install -r requirements.txt
