@@ -6,6 +6,8 @@ repo = Repo(os.getcwd())
 tags = sorted(repo.tags, key=lambda t: t.commit.committed_datetime)
 latest_tag = str(tags[-1])
 
+os.makedirs('bulk_directory_tree')
+
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
