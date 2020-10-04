@@ -8,7 +8,7 @@ setup(
     version='0.0.7',
     py_modules=['bulk_directory_tree.py'],
     install_requires=[
-        'Click==7.0'
+        'Click==7.1.2'
     ],
     python_requires='>=2.6, !=3.0.*, !=3.1.*, !=3.2.*, <4',
     entry_points='''

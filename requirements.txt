@@ -1,2 +1,2 @@
-Click==7.0
+Click==7.1.2
 pytest==6.1.1
