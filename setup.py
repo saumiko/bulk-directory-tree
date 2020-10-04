@@ -1,12 +1,19 @@
 from setuptools import setup
+import os
+from git import Repo
+
+repo = Repo(os.getcwd())
+tags = sorted(repo.tags, key=lambda t: t.commit.committed_datetime)
+latest_tag = str(tags[-1])
 
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setup(
     name='bulk_directory_tree',
-    version='0.0.7',
+    version=latest_tag,
     py_modules=['bulk_directory_tree.py'],
+    package_dir={'': os.getcwd()},
     install_requires=[
         'Click==7.1.2'
     ],
