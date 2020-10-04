@@ -6,7 +6,6 @@ repo = Repo(os.getcwd())
 tags = sorted(repo.tags, key=lambda t: t.commit.committed_datetime)
 latest_tag = str(tags[-1])
 
-os.makedirs('bulk_directory_tree')
 
 with open("README.md", "r") as fh:
     long_description = fh.read()
@@ -14,8 +13,7 @@ with open("README.md", "r") as fh:
 setup(
     name='bulk_directory_tree',
     version=latest_tag,
-    py_modules=['bulk_directory_tree.py'],
-    package_dir={'': os.getcwd()},
+    py_modules=['bulk_directory_tree'],
     install_requires=[
         'Click==7.1.2'
     ],
