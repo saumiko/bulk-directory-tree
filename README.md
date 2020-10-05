@@ -1,6 +1,10 @@
 
 # Bulk Directory Tree  
-[![Build Status](https://travis-ci.org/saumiko/bulk-directory-tree.svg?branch=master)](https://travis-ci.org/saumiko/bulk-directory-tree)  [![Requirements Status](https://requires.io/github/saumiko/bulk-directory-tree/requirements.svg?branch=master)](https://requires.io/github/saumiko/bulk-directory-tree/requirements/?branch=master)   [![star this repo](http://githubbadges.com/star.svg?user=saumiko&repo=bulk-directory-tree&style=flat)](https://github.com/saumiko/bulk-directory-tree)  [![fork this repo](http://githubbadges.com/fork.svg?user=saumiko&repo=bulk-directory-tree&style=flat)](https://github.com/saumiko/bulk-directory-tree/fork)  ![PyPI](https://img.shields.io/pypi/v/bulk-directory-tree.svg)
+[![Build Status](https://travis-ci.org/saumiko/bulk-directory-tree.svg?branch=master)](https://travis-ci.org/saumiko/bulk-directory-tree)
+[![Requirements Status](https://requires.io/github/saumiko/bulk-directory-tree/requirements.svg?branch=master)](https://requires.io/github/saumiko/bulk-directory-tree/requirements/?branch=master)
+[![PyPI](https://img.shields.io/pypi/v/bulk-directory-tree.svg)](https://pypi.org/project/bulk-directory-tree)
+[![star this repo](https://img.shields.io/github/stars/saumiko/bulk-directory-tree)](https://github.com/saumiko/bulk-directory-tree) 
+[![fork this repo](https://img.shields.io/github/forks/saumiko/bulk-directory-tree)](https://github.com/saumiko/bulk-directory-tree/fork)  
   
 Creates `n` number of directories for `d` depth at any directory.  
   
