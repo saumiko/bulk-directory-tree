@@ -15,7 +15,7 @@ setup(
     version=latest_tag,
     py_modules=['bulk_directory_tree'],
     install_requires=[
-        'Click==7.1.2'
+        'Click==8.0.1'
     ],
     python_requires='>=2.6, !=3.0.*, !=3.1.*, !=3.2.*, <4',
     entry_points='''
